@@ -9,7 +9,7 @@ const sorrSum = function () {
   const sorrCMCID = document.querySelector("#sorr-input-5").value || "N/A";
 
   navigator.clipboard.writeText(
-    `${sorrSum} // CN ${sorrCN} // SN ${sorrSN} // CMCID ${sorrCMCID}`
+    `${sorrSum} // CN ${sorrCN} // SN ${sorrSN} // CMCID ${sorrCMCID}`,
   );
   tempSumNotification.style.display = "block";
   setTimeout(() => {
@@ -37,7 +37,7 @@ const sorrCopy = function () {
   const sorrNote = document.querySelector("#sorr-input-10").value || "N/A";
 
   navigator.clipboard.writeText(
-    `Caller First and Last Name: ${sorrName}\nCaller's Phone Number: ${sorrPhone}\nCaller's Email: ${sorrEmail}\n\nSummary: ${sorrSum}\nCompanyID: ${sorrCN}\nStoreID: ${sorrSN}\nAloha Key (CMCID): ${sorrCMCID}\n\nDiscrepancy Started on: ${sorrDisFrom} (yyyy-mm-dd)\nDiscrepancy Ended on: ${sorrDisTo} (yyyy-mm-dd)\nMissing Amount Reported: ${sorrAmt}\n\nAdditional Notes for SORR Department:\n\n${sorrNote}`
+    `Caller First and Last Name: ${sorrName}\nCaller's Phone Number: ${sorrPhone}\nCaller's Email: ${sorrEmail}\n\nSummary: ${sorrSum}\nCompanyID: ${sorrCN}\nStoreID: ${sorrSN}\nAloha Key (CMCID): ${sorrCMCID}\n\nDiscrepancy Started on: ${sorrDisFrom} (yyyy-mm-dd)\nDiscrepancy Ended on: ${sorrDisTo} (yyyy-mm-dd)\nMissing Amount Reported: ${sorrAmt}\n\nAdditional Notes for SORR Department:\n\n${sorrNote}`,
   );
   tempCopyNotification.style.display = "block";
   setTimeout(() => {
@@ -89,7 +89,7 @@ sorrPdrButton.addEventListener("click", sorrPdr);
 const sorrDCButton = document.querySelector("#sorr-notif-copy-1");
 
 const sorrDC = function () {
-  const textToCopy = "Internal file share available to authorized employees.";
+  const textToCopy = "\\\\10.1.33.205\\d\\Level 2 Offline Files";
   navigator.clipboard.writeText(textToCopy);
   notification.style.display = "block";
   setTimeout(() => {
@@ -104,7 +104,10 @@ sorrDCButton.addEventListener("click", sorrDC);
 const sorrOKMButton = document.querySelector("#sorr-guide-0");
 
 const sorrOKM = function () {
-  showInternalResourceNotice();
+  window.open(
+    "https://ncrvoyix.sharepoint.com/:w:/r/sites/NCR_Payments_BL/_layouts/15/doc2.aspx?action=edit&sourcedoc=%7Bd9b68f76-a7f6-4b02-8564-ca8fc1078b1c%7D&wdExp=TEAMS-TREATMENT&web=1&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNjEwMDIxMjAxOCIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D",
+    "_blank",
+  );
 };
 
 sorrOKMButton.addEventListener("click", sorrOKM);
