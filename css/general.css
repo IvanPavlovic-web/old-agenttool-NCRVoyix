@@ -1,0 +1,169 @@
+/* FONT SIZES */
+/* 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+*/
+
+/* SPACING SYSTEM
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+*/
+
+/* COLORS */
+
+#009edb
+#0070d2
+#005fb2
+#032d60
+
+/* GENERAL */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #111;
+  --main-txt-size: 1.6rem;
+  --placeholder-color: #abcdeb;
+}
+
+html {
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: initial !important;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  background-color: #2f2b3a;
+}
+/* header {
+  position: sticky;
+  top: 0;
+  width: 96.66%;
+  z-index: 9999;
+} */
+
+.active {
+  display: block;
+}
+.hidden {
+  display: none !important;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+/* GENERAL REUSABLE COMPONENTS */
+
+.container {
+  /* 1140px */
+  max-width: 130rem;
+  padding: 0 3.2rem;
+  margin: 4rem auto;
+}
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+/* REMOVING DEFAULT VALUES FROM INPUT ELEMENTS */
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* REMOVAL OF THE SLIDER ON NUMBER INPUNTS */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+/* Changing the style of the INPUT values */
+
+textarea,
+select,
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  border: 0.2rem solid #ba9ffb;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  font-weight: 400;
+  background-color: #ba9ffb;
+}
+
+/* Adding an focus color to input elements */
+
+textarea:focus,
+select:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="text"]:focus {
+  border: 0.2rem solid #e62828;
+}
+/* TEXT AREA - REMOVING THE FLEXIBILITY */
+
+textarea {
+  resize: none;
+  background-color: #ba9ffb;
+}
+/* Label text decoration */
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #717171;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #717171;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #717171;
+}
+#notification,
+#tempSumNotification,
+#tempCopyNotification,
+#tempChatNotification,
+#tempEscNotification,
+#gkNotification,
+#gkUpdateNotification,
+#gkTemplateNotification {
+  display: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 0.35rem;
+  color: #9171f8;
+  background-color: #1a1625;
+  border: 1px solid #9171f8;
+}
+#modification,
+#modification {
+  padding-bottom: 4rem !important;
+}

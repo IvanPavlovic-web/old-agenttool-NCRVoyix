@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS MERGE -->
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/indexStyle.css" />
+    <!-- JS SCRIPTS -->
+    <script defer src="script/indexScript.js"></script>
+    <script defer src="script/cmdScript.js"></script>
+    <script defer src="script/templateScript.js"></script>
+    <script defer src="script/tmzScript.js"></script>
+    <script defer src="script/gkScript.js"></script>
+    <script defer src="script/onScript.js"></script>
+    <script defer src="script/nppScript.js"></script>
+    <script defer src="script/ptoScript.js"></script>
+    <script defer src="script/sorrScript.js"></script>
+
+    <!-- TITLE -->
+    <title>Agent tool &vert; Voyix</title>
+    <!-- FAVICON -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="fav/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="fav/favicon-16x16.png"
+    />
+    <link rel="manifest" href="fav/site.webmanifest" />
+    <link rel="mask-icon" href="fav/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div id="notification">Command Copied to Clipboard!</div>
+    <div id="tempSumNotification">Summary Copied to Clipboard!</div>
+    <div id="tempCopyNotification">Notes Copied to Clipboard!</div>
+    <div id="tempChatNotification">Chat Question Copied to Clipboard!</div>
+    <div id="tempEscNotification">Sev-1 Escalation Copied to Clipboard!</div>
+    <div id="gkNotification">New Ticket Template Copied to Clipboard!</div>
+    <div id="gkUpdateNotification">Email Update Copied to Clipboard!</div>
+    <div id="gkTemplateNotification">
+      Customer Template Copied to Clipboard!
+    </div>
+    <header class="header-container">
+      <div class="logo-container">
+        <p class="logo-text">AGENT TOOL &vert; Voyix</p>
+      </div>
+      <ul class="nav-links-container">
+        <li class="nav-links">
+          <button id="template-btn" class="template-btn nav-button">
+            Template
+          </button>
+        </li>
+        <li class="nav-links">
+          <button id="npp-btn" class="npp-btn nav-button">RMA</button>
+        </li>
+        <li class="nav-links">
+          <button id="gk-btn" class="gk-btn nav-button">Gatekeeper</button>
+        </li>
+        <!-- REDACTED OLD OVERNIGHT -->
+        <!-- <li class="nav-links">
+          <button id="on-btn" class="on-btn nav-button">Overnight</button>
+        </li> -->
+        <!-- REDACTED OLD OVERNIGHT -->
+        <li class="nav-links">
+          <button id="on2-btn" class="nav-button">Payments Overnight</button>
+        </li>
+        <li class="nav-links">
+          <button id="cmd-btn" class="cmd-btn nav-button">Commands</button>
+        </li>
+
+        <li class="nav-links">
+          <button id="sorr-btn" class="sorr-btn nav-button">SORR</button>
+        </li>
+        <li class="nav-links">
+          <button id="ptos-btn" class="ptos-btn nav-button">PTO</button>
+        </li>
+      </ul>
+    </header>
+    <section class="template-section container" id="section-0">
+      <div class="subheader-container">
+        <!-- BUTTONS AT THE TOP -->
+        <button id="temp-copy" class="sub-buttons">COPY</button>
+        <button id="temp-summary" class="sub-buttons">COPY SUMMARY</button>
+        <button id="temp-chat" class="sub-buttons">CHAT QUESTION</button>
+        <button id="temp-next" class="sub-buttons">NEXT STEPS</button>
+        <button id="save-txt-button" class="sub-buttons">SAVE AS</button>
+        <button id="temp-sev" class="sub-buttons">SEV-1 TEAMS</button>
+        <button id="temp-clear" class="sub-buttons sub-btn-del">
+          CLEAR ALL FIELDS
+        </button>
+      </div>
+      <!-- BUTTONS END -->
+      <!-- INFORMATION SIDE -->
+      <div class="template-info">
+        <div class="template-info-container">
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-0"
+              >Caller First and Last Name:</label
+            >
+            <input
+              class="cust-input"
+              id="cust-input-0"
+              type="text"
+              placeholder="First and Last Name"
+            />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-1"
+              >Caller's Phone Number:</label
+            >
+            <input
+              class="cust-input"
+              id="cust-input-1"
+              type="text"
+              placeholder="Phone Number"
+            />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-2"
+              >Caller's E-mail:</label
+            >
+            <input
+              class="cust-input"
+              id="cust-input-2"
+              type="text"
+              placeholder="E-Mail Address"
+            />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-3"
+              >Site's Street Address:</label
+            >
+            <input
+              class="cust-input"
+              id="cust-input-3"
+              type="text"
+              placeholder="Street, City, ZIP Code"
+            />
+          </div>
+          <br />
+          <br />
+          <br />
+          <!-- TS INFO -->
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-4">Environment:</label>
+            <select class="cust-select" id="cust-input-4" name="Environment">
+              <option value="Hospitality">Hospitality</option>
+              <option value="Common">Common</option>
+              <option value="CTE">CTE</option>
+              <option value="Government">Government</option>
+              <option value="Silver">Silver</option>
+            </select>
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-5">Pillars:</label>
+            <select class="cust-select" id="cust-input-5" name="Pillars">
+              <option value="SMB - Small-Medium-Business">
+                SMB - Small-Medium-Business
+              </option>
+              <option value="ENT - Enterprise">ENT - Enterprise</option>
+              <option value="RSG - Reseller">RSG - Reseller</option>
+              <option value="SORR">SORR</option>
+            </select>
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-6">CompanyID:</label>
+            <input class="cust-input" id="cust-input-6" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-7">StoreID:</label>
+            <input class="cust-input" id="cust-input-7" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-8"
+              >Aloha Key (CMCID):</label
+            >
+            <input class="cust-input" id="cust-input-8" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-9">Ticket Number:</label>
+            <input class="cust-input" id="cust-input-9" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-10">Issue Summary:</label>
+            <input class="cust-input" id="cust-input-10" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-11"
+              >Date when it stopped working:</label
+            >
+            <input class="cust-date" id="cust-input-11" type="date" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-12"
+              >Number of affected lanes:</label
+            >
+            <input class="cust-input" id="cust-input-12" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-13">Severity:</label>
+            <select class="cust-select" id="cust-input-13" name="Environment">
+              <option class="none" value="-- None --">-- None --</option>
+              <option class="sev1" value="P1 - Critical">P1 - Critical</option>
+              <option class="sev2" value="P2 - Major">P2 - Major</option>
+              <option class="sev3" value="P3 - Medium">P3 - Medium</option>
+              <option class="sev4" value="P4 - Low">P4 - Low</option>
+            </select>
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-14"
+              >MTX_POS.dll Version:</label
+            >
+            <input class="cust-input" id="cust-input-14" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-15"
+              >MTX_EPS.dll Version:</label
+            >
+            <input class="cust-input" id="cust-input-15" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-16"
+              >PIN Pad Firmware Version:</label
+            >
+            <input class="cust-input" id="cust-input-16" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-17"
+              >PIN Pad OS Version:</label
+            >
+            <input class="cust-input" id="cust-input-17" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-18">PIN Pad Model:</label>
+            <select class="cust-select" id="cust-input-18" name="PINPads">
+              <option class="none" value="-- None --">-- None --</option>
+              <option value="Equinox Luxe6200m P@T">
+                Equinox Luxe6200m P@T
+              </option>
+              <option value="Equinox Luxe6200m">Equinox Luxe6200m</option>
+              <option value="Equinox Luxe8500i">Equinox Luxe8500i</option>
+              <option value="Equinox 5300">Equinox 5300</option>
+              <option value="Verifone MX915">Verifone MX915</option>
+              <option value="Verifone MX925">Verifone MX925</option>
+              <option value="Verifone VX820 (EOL)">Verifone VX820 (EOL)</option>
+              <option value="Verifone M400">Verifone M400</option>
+              <option value="Verifone P400">Verifone P400</option>
+              <option value="Ingenico ISC250">Ingenico ISC250</option>
+              <option value="Ingenico Axium">Ingenico Axium</option>
+              <option value="Ingenico Moby/5500">Ingenico Moby/5500</option>
+            </select>
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-19">APS Version:</label>
+            <input class="cust-input" id="cust-input-19" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="cust-input-20"
+              >Aloha POS Version:</label
+            >
+            <input class="cust-input" id="cust-input-20" type="text" />
+          </div>
+        </div>
+        <div class="template-notes-container">
+          <div class="wrapper-cust-right">
+            <label class="cust-label" for="cust-input-21"
+              >Steps taken to resolve the issue:</label
+            >
+            <textarea id="cust-input-21" rows="25" cols="50"></textarea>
+          </div>
+          <!-- NEXT STEPS -->
+          <div class="wrapper-cust-right">
+            <label class="cust-label top-divide" for="cust-input-23"
+              >Next Steps to perform:</label
+            >
+            <textarea id="cust-input-23" rows="10" cols="50"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="esc-container">
+        <p class="esc-header">L3 Escalation</p>
+        <div class="esc-btn-container">
+          <button id="tech-esc" class="esc-btn esc-btn--pad">
+            <p>Technical</p>
+          </button>
+          <button id="cust-esc" class="esc-btn esc-btn--pad">
+            <p>Customer</p>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- GATEKEEPER SECTION -->
+    <section class="gk-section container hidden" id="section-1">
+      <div class="subheader-container">
+        <!-- BUTTONS AT THE TOP -->
+        <button id="gk-new" class="sub-buttons">NEW TICKET</button>
+        <button id="gk-update" class="sub-buttons">EMAIL UPDATE</button>
+        <button id="gk-rma" class="sub-buttons">HARDWARE DISPATCH</button>
+        <button id="gk-clear" class="sub-buttons sub-btn-del">
+          CLEAR TICKET FIELD
+        </button>
+      </div>
+      <div class="gk-container">
+        <label class="cust-label" for="gk-field">New Ticket number: </label>
+        <input class="gk-input" id="gk-field" type="text" />
+      </div>
+    </section>
+    <!-- CMD -->
+    <section class="cmd-section container hidden" id="section-2">
+      <div class="cmd-container">
+        <ul>
+          <li class="cmd-list">
+            <p class="cmd-header-det">Command Shorthand</p>
+            <p class="cmd-header-det">Command Details</p>
+            <p class="cmd-header-det">Command Button</p>
+          </li>
+          <li class="cmd-list">
+            <p class="cmd-header">CPK Settle</p>
+            <p class="cmd-desc">
+              Command to settle CPK Sites over Windows Event
+            </p>
+            <button id="cmd-0" class="cmd-button">COPY</button>
+          </li>
+          <li class="cmd-list">
+            <p class="cmd-header">ARP Mapping</p>
+            <p class="cmd-desc">
+              Command to show which Devices are on the Network
+            </p>
+            <button id="cmd-1" class="cmd-button">COPY</button>
+          </li>
+
+          <li class="cmd-list">
+            <p class="cmd-header">ARP Cache</p>
+            <p class="cmd-desc">Command to Delete ARP Cache</p>
+            <button id="cmd-2" class="cmd-button">COPY</button>
+          </li>
+          <li class="cmd-list">
+            <p class="cmd-header">Flush DNS</p>
+            <p class="cmd-desc">
+              Command to Clear Cached IP Addresses and other DNS Results
+            </p>
+            <button id="cmd-3" class="cmd-button">COPY</button>
+          </li>
+          <li class="cmd-list">
+            <p class="cmd-header">System Up-Time</p>
+            <p class="cmd-desc">Command to View Device UpTime</p>
+            <button id="cmd-4" class="cmd-button">COPY</button>
+          </li>
+          <li class="cmd-list">
+            <p class="cmd-header">Network Config</p>
+            <p class="cmd-desc">Command to Check Network Configuration</p>
+            <button id="cmd-5" class="cmd-button">COPY</button>
+          </li>
+          <li class="cmd-list">
+            <p class="cmd-header">Check Firewall</p>
+            <p class="cmd-desc">
+              Command to Check the Status of Windows Firewall
+            </p>
+            <button id="cmd-6" class="cmd-button">COPY</button>
+          </li>
+          <li class="cmd-list">
+            <p class="cmd-header">Checking UAC</p>
+            <p class="cmd-desc">Command to Check UAC Status</p>
+            <button id="cmd-8" class="cmd-button">COPY</button>
+          </li>
+          <li class="cmd-list">
+            <p class="cmd-header">KEK Key</p>
+            <p class="cmd-desc">Command to Pull the KEK Key</p>
+            <button id="cmd-10" class="cmd-button">COPY</button>
+          </li>
+          <li class="cmd-list">
+            <p class="cmd-header">EDC Path</p>
+            <p class="cmd-desc">Command to correct EDC Path on FOH</p>
+            <button id="cmd-11" class="cmd-button">COPY</button>
+          </li>
+          <li class="cmd-list">
+            <p class="cmd-header">EDC Path Removal</p>
+            <p class="cmd-desc">Command to remove EDC Path on FOH/BOH</p>
+            <button id="cmd-16" class="cmd-button">COPY</button>
+          </li>
+          <li class="cmd-list">
+            <p class="cmd-header">Checking COM ports</p>
+            <p class="cmd-desc">
+              Command to view what is plugged to each COM port
+            </p>
+            <button id="cmd-12" class="cmd-button">COPY</button>
+          </li>
+          <li class="cmd-list">
+            <p class="cmd-header">Checking Virtualization</p>
+            <p class="cmd-desc">
+              Command to check if Virtualization is set to 0 or 1
+            </p>
+            <button id="cmd-13" class="cmd-button">COPY</button>
+          </li>
+          <li class="cmd-list">
+            <p class="cmd-header">Route Delete</p>
+            <p class="cmd-desc">Command to Remove DNS and DG from FOH</p>
+            <button id="cmd-15" class="cmd-button">COPY</button>
+          </li>
+          <li class="cmd-list">
+            <p class="cmd-header">Windows Defender List</p>
+            <p class="cmd-desc">
+              Command to View what is Blocked by Windows Defender
+            </p>
+            <button id="cmd-19" class="cmd-button">COPY</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="on-section container hidden" id="section-4">
+      <div class="subheader-container">
+        <!-- BUTTONS AT THE TOP -->
+        <button id="on-copy" class="sub-buttons">COPY</button>
+        <button id="on-summary" class="sub-buttons">COPY SUMMARY</button>
+        <button id="on-tmz" class="sub-buttons hidden">
+          TIME ZONE CONVERTER
+        </button>
+        <button id="on-clear" class="sub-buttons sub-btn-del">
+          CLEAR ALL FIELDS
+        </button>
+      </div>
+      <div class="switch-button">></div>
+      <div class="on-info-container">
+        <p class="on-header">Overnight Support Task // CN // SN // //</p>
+        <div class="wrapper-on">
+          <label class="cust-label" for="on-input-0">ON Summary: </label>
+          <input class="cust-input" id="on-input-0" type="text" />
+        </div>
+        <div class="wrapper-on">
+          <label class="cust-label" for="on-input-1">Ticket Number: </label>
+          <input class="cust-input" id="on-input-1" type="text" />
+        </div>
+        <div class="wrapper-on">
+          <label class="cust-label" for="on-input-2">Company Number: </label>
+          <input class="cust-input" id="on-input-2" type="text" />
+        </div>
+        <div class="wrapper-on">
+          <label class="cust-label" for="on-input-3">Store Number: </label>
+          <input class="cust-input" id="on-input-3" type="text" />
+        </div>
+        <div class="wrapper-on">
+          <label class="cust-label" for="on-input-4">Aloha Key: </label>
+          <input
+            class="cust-input"
+            id="on-input-4"
+            type="text"
+            placeholder="You can leave this field blank"
+          />
+        </div>
+      </div>
+      <div class="on-box-containers">
+        <!-- OLD TENDER -->
+        <!-- OLD 1 -->
+        <div class="on-box__1">
+          <div class="on-old on-old--1">
+            <div class="wrapper-tender">
+              <label class="cust-label" for="o1-input-0"
+                >Old Transaction Profile:
+              </label>
+              <input class="cust-input" type="text" id="o1-input-0" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label" for="o1-input-1">Old Host: </label>
+              <input class="cust-input" type="text" id="o1-input-1" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label" for="o1-input-2"
+                >Old MerchantID:
+              </label>
+              <input class="cust-input" type="text" id="o1-input-2" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label" for="o1-input-3"
+                >Old TerminalID:
+              </label>
+              <input class="cust-input" type="text" id="o1-input-3" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label" for="o1-input-4">Old Platform: </label>
+              <input
+                class="cust-input"
+                type="text"
+                id="o1-input-4"
+                placeholder="RapidConnect"
+              />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label" for="o1-input-5">Old BankID: </label>
+              <input
+                type="text"
+                id="o1-input-5"
+                class="cust-input"
+                placeholder="FithThird (Vantiv)"
+              />
+            </div>
+          </div>
+          <!-- NEW 1 -->
+          <div class="on-new on-new--1">
+            <div class="wrapper-tender">
+              <label class="cust-label on-label" for="n1-input-0"
+                >New Transaction Profile:
+              </label>
+              <input class="cust-input on-input" type="text" id="n1-input-0" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label on-label" for="n1-input-1"
+                >New Host:
+              </label>
+              <input class="cust-input on-input" type="text" id="n1-input-1" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label on-label" for="n1-input-2"
+                >New MerchantID:
+              </label>
+              <input class="cust-input on-input" type="text" id="n1-input-2" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label on-label" for="n1-input-3"
+                >New TerminalID:
+              </label>
+              <input class="cust-input on-input" type="text" id="n1-input-3" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label on-label" for="n1-input-4"
+                >New Platform:
+              </label>
+              <input
+                class="cust-input on-input"
+                type="text"
+                id="n1-input-4"
+                placeholder="RapidConnect"
+              />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label on-label" for="n1-input-5"
+                >New BankID:
+              </label>
+              <input
+                type="text"
+                id="n1-input-5"
+                class="cust-input on-input"
+                placeholder="FithThird (Vantiv)"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="on-box__2">
+          <!-- OLD 2 -->
+          <div class="on-old on-old--2">
+            <div class="wrapper-tender">
+              <label class="cust-label" for="o2-input-0"
+                >Old Transaction Profile:
+              </label>
+              <input class="cust-input" type="text" id="o2-input-0" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label" for="o2-input-1">Old Host: </label>
+              <input class="cust-input" type="text" id="o2-input-1" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label" for="o2-input-2"
+                >Old MerchantID:
+              </label>
+              <input class="cust-input" type="text" id="o2-input-2" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label" for="o2-input-3"
+                >Old TerminalID:
+              </label>
+              <input class="cust-input" type="text" id="o2-input-3" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label" for="o2-input-4">Old Platform: </label>
+              <input
+                class="cust-input"
+                type="text"
+                id="o2-input-4"
+                placeholder="RapidConnect"
+              />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label" for="o2-input-5">Old BankID: </label>
+              <input
+                type="text"
+                id="o2-input-5"
+                class="cust-input"
+                placeholder="FithThird (Vantiv)"
+              />
+            </div>
+          </div>
+
+          <!-- NEW 2 -->
+          <div class="on-new on-new--2">
+            <div class="wrapper-tender">
+              <label class="cust-label on-label" for="n2-input-0"
+                >New Transaction Profile:
+              </label>
+              <input class="cust-input on-input" type="text" id="n2-input-0" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label on-label" for="n2-input-1"
+                >New Host:
+              </label>
+              <input class="cust-input on-input" type="text" id="n2-input-1" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label on-label" for="n2-input-2"
+                >New MerchantID:
+              </label>
+              <input class="cust-input on-input" type="text" id="n2-input-2" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label on-label" for="n2-input-3"
+                >New TerminalID:
+              </label>
+              <input class="cust-input on-input" type="text" id="n2-input-3" />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label on-label" for="n2-input-4"
+                >New Platform:
+              </label>
+              <input
+                class="cust-input on-input"
+                type="text"
+                id="n2-input-4"
+                placeholder="RapidConnect"
+              />
+            </div>
+            <div class="wrapper-tender">
+              <label class="cust-label on-label" for="n2-input-5"
+                >New BankID:
+              </label>
+              <input
+                type="text"
+                id="n2-input-5"
+                class="cust-input on-input"
+                placeholder="FithThird (Vantiv)"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="on-date-container">
+        <div class="wrapper-on">
+          <textarea
+            id="on-input-7"
+            cols="41"
+            rows="5"
+            placeholder="Additional Notes...(Optional)"
+          ></textarea>
+        </div>
+        <div class="wrapper-on">
+          <label class="cust-label" for="on-input-5"
+            >Time of change (US):
+          </label>
+          <input
+            class="cust-input"
+            id="on-input-5"
+            type="text"
+            placeholder="mm/dd/yyyy - hh:mm (TZ)"
+          />
+        </div>
+        <div class="wrapper-on">
+          <label class="cust-label" for="on-input-6"
+            >Time of change (BL):
+          </label>
+          <input
+            class="cust-input"
+            id="on-input-6"
+            type="text"
+            placeholder="mm/dd/yyyy - hh:mm"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="tmz-section container hidden" id="section-bonus">
+      <div class="subheader-container">
+        <!-- BUTTONS AT THE TOP -->
+        <button id="on-tmz-on" class="sub-buttons">ON TEMPLATE</button>
+        <button id="tmz-clear" class="sub-buttons sub-btn-del">
+          CLEAR ALL FIELDS
+        </button>
+      </div>
+      <div class="timezone-container">
+        <div class="tz-container">
+          <div class="tz-wrapper">
+            <label class="tz-label" for="timezone">Select Timezone:</label>
+            <select id="timezone">
+              <option value="PT">Pacific Time (PT)</option>
+              <option value="CT">Central Time (CT)</option>
+              <option value="ET">Eastern Time (ET)</option>
+              <option value="MT">Mountain Time (MT)</option>
+              <option value="HT">Hawaii Time (HT)</option>
+              <option value="AKT">Alaska Standard Time (AKT)</option>
+              <option value="AT">Atlantic Time (AT)</option>
+            </select>
+          </div>
+          <div class="tz-wrapper">
+            <label class="tz-label" for="date">Enter the Date:</label>
+            <input type="date" id="date" value="" />
+          </div>
+          <div class="tz-wrapper">
+            <label class="tz-label" for="time">Enter the Time (HH:MM):</label>
+            <input type="text" id="time" value="" />
+          </div>
+          <div class="tz-wrapper">
+            <div id="results"></div>
+          </div>
+        </div>
+        <img src="img/tmz.png" class="tmz-img" />
+      </div>
+    </section>
+
+    <section class="rma-section container hidden" id="section-6">
+      <div class="subheader-container">
+        <!-- BUTTONS AT THE TOP -->
+        <button id="rma-copy-sum" class="sub-buttons">COPY SUMMARY</button>
+        <button id="rma-copy" class="sub-buttons">COPY FOR TICKET</button>
+        <button id="rma-copy-teams" class="sub-buttons">COPY FOR TEAMS</button>
+        <button id="rma-clear" class="sub-buttons sub-btn-del">
+          CLEAR ALL FIELDS
+        </button>
+      </div>
+      <div class="npp-container">
+        <div class="npp-info-container">
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="rma-input-0"
+              >Caller First and Last Name:</label
+            >
+            <input class="cust-input" id="rma-input-0" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="rma-input-1"
+              >Caller's Phone Number:</label
+            >
+            <input class="cust-input" id="rma-input-1" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="rma-input-3"
+              >Caller's Email Address:</label
+            >
+            <input class="cust-input" id="rma-input-3" type="text" />
+          </div>
+          <div class="wrapper-cust-left rma-expander">
+            <label class="cust-label" for="rma-input-4"
+              >Site's Street Address:</label
+            >
+            <input class="cust-input" id="rma-input-4" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="rma-input-5">CompanyID:</label>
+            <input class="cust-input" id="rma-input-5" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="rma-input-6">StoreID:</label>
+            <input class="cust-input" id="rma-input-6" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="rma-input-7"
+              >Aloha Key (CMCID):</label
+            >
+            <input class="cust-input" id="rma-input-7" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="rma-input-8">Ticket Number:</label>
+            <input class="cust-input" id="rma-input-8" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="rma-input-9">Issue Summary:</label>
+            <input class="cust-input" id="rma-input-9" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="rma-input-10">PIN Pad Model:</label>
+            <select class="cust-select" id="rma-input-10" name="PINPads">
+              <option class="none" value="-- None --">-- Select --</option>
+              <option value="Equinox Luxe6200m P@T">
+                Equinox Luxe6200m P@T
+              </option>
+              <option value="Equinox Luxe6200m">Equinox Luxe6200m</option>
+              <option value="Equinox Luxe8500i">Equinox Luxe8500i</option>
+              <option value="Equinox 5300">Equinox 5300</option>
+              <option value="VeriFone MX915">VeriFone MX915</option>
+              <option value="VeriFone MX925">VeriFone MX925</option>
+              <option value="VeriFone VX820 (EOL)">VeriFone VX820 (EOL)</option>
+              <option value="VeriFone M400">VeriFone M400</option>
+              <option value="VeriFone P400">VeriFone P400</option>
+              <option value="Ingenico ISC250">Ingenico ISC250</option>
+              <option value="Ingenico Axium">Ingenico Axium</option>
+              <option value="Ingenico Moby/5500">Ingenico Moby/5500</option>
+            </select>
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="rma-input-19"
+              >Firmware version:</label
+            >
+            <input class="cust-input" id="rma-input-19" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="rma-input-18">Cable Type:</label>
+            <select class="cust-select" id="rma-input-18" name="Cables">
+              <option class="none" value="-- None --">-- Select --</option>
+              <option value="Powered USB Cable">Powered USB Cable</option>
+              <option value="Ethernet Cable">Ethernet Cable</option>
+              <option value="External Powered Cable">
+                External Powered Cable
+              </option>
+            </select>
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="rma-input-11"
+              >Error message on the PIN Pad / POS:</label
+            >
+            <input class="cust-input" id="rma-input-11" type="text" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="rma-input-20"
+              >Contractual RMA SLA:</label
+            >
+            <select class="cust-select" id="rma-input-20" name="SLA">
+              <option class="none" value="-- None --">-- Select --</option>
+              <option value="5x9 NBD PT">5x9 NBD PT</option>
+              <option value="7x9 NCD PO">7x9 NCD PO</option>
+              <option value="7x9 NCD PT">7x9 NCD PT</option>
+              <option value="7x24x4 PO">7x24x4 PO</option>
+              <option value="7x24x4 PT">7x24x4 PT</option>
+              <option value="5x9 NBD PO FSL">5x9 NBD PO FSL</option>
+              <option value="5x9 NBD PT FSL">5x9 NBD PT FSL</option>
+              <option value="7x9 NCD PT FSL">7x9 NCD PT FSL</option>
+              <option value="7x9 NCD PO FSL">7x9 NCD PO FSL</option>
+              <option value="5x9 NBD PO">5x9 NBD PO</option>
+            </select>
+          </div>
+        </div>
+        <div class="npp-text-container">
+          <div class="wrapper-rma-right">
+            <label class="cust-label" for="rma-input-16"
+              >Additional Notes:</label
+            >
+            <textarea
+              id="rma-input-16"
+              rows="8"
+              cols="3"
+              placeholder="Cable RMA(s) should be prioritized over PIN Pad RMA(s). PIN Pad should ONLY be replaced if confirmed faulty. If not sure, please confirm with LS."
+            ></textarea>
+            <p class="rma-notif">&darr; MANDATORY &darr;</p>
+            <p class="rma-notif-mini">
+              Please make sure that all of the steps below are explained in
+              detail in the "Additional Notes" field
+            </p>
+            <p class="rma-notif-mini">
+              All RMA Approval requests must be sent to the "RMA Approval" teams
+              chat.
+            </p>
+            <div class="wrapper-cust-left rma-expander-top">
+              <label class="cust-label" for="rma-input-12"
+                >PIN Pad visible under COM port?</label
+              >
+              <select class="cust-select" id="rma-input-12" name="Ports">
+                <option class="none" value="-- None --">-- Select --</option>
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+              </select>
+            </div>
+            <div class="wrapper-cust-left">
+              <label class="cust-label" for="rma-input-13"
+                >USB Drivers up-to-date / reinstalled?</label
+              >
+              <select
+                class="cust-select"
+                id="rma-input-13"
+                name="DriversReinstall"
+              >
+                <option class="none" value="-- None --">-- Select --</option>
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+              </select>
+            </div>
+            <div class="wrapper-cust-left">
+              <label class="cust-label" for="rma-input-14"
+                >PIN Pad Power Drained?</label
+              >
+              <select class="cust-select" id="rma-input-14" name="PowerDrain">
+                <option class="none" value="-- None --">-- Select --</option>
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+              </select>
+            </div>
+            <div class="wrapper-cust-left">
+              <label class="cust-label" for="rma-input-15"
+                >PIN Pad swapped to a different Terminal?</label
+              >
+              <select class="cust-select" id="rma-input-15" name="SwapLanes">
+                <option class="none" value="-- None --">-- Select --</option>
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+              </select>
+            </div>
+            <div class="wrapper-cust-left">
+              <label class="cust-label" for="rma-input-17"
+                >PIN Pad working on another Terminal?</label
+              >
+              <select
+                class="cust-select"
+                id="rma-input-17"
+                name="SwapLanesDone"
+              >
+                <option class="none" value="-- None --">-- Select --</option>
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sorr-guide-container">
+        <p class="sorr-guide-header">RMA Procedures</p>
+        <div class="esc-btn-container">
+          <button id="rma-guide-0" class="esc-btn esc-btn--pad">
+            <p>SMB | Small-Medium-Business</p>
+          </button>
+          <button id="rma-guide-1" class="esc-btn esc-btn--pad">
+            <p>Corporate Clients</p>
+          </button>
+          <button id="rma-guide-2" class="esc-btn esc-btn--pad">
+            <p>Direct Support Clients</p>
+          </button>
+          <button id="rma-guide-3" class="esc-btn esc-btn--pad">
+            <p>Common | Retail</p>
+          </button>
+          <button id="rma-guide-4" class="esc-btn esc-btn--pad">
+            <p>Hardware Replacement List</p>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- PTO SECTION -->
+    <section class="pto-section container hidden" id="section-7">
+      <div class="subheader-container">
+        <!-- BUTTONS AT THE TOP -->
+        <button id="vac-btn" class="sub-buttons">VACATION</button>
+        <button id="shift-btn" class="sub-buttons">SHIFT SWAP</button>
+        <button id="pl-btn" class="sub-buttons">PAID LEAVE</button>
+        <button id="sick-btn" class="sub-buttons">SICK LEAVE</button>
+      </div>
+      <!-- PTO VAC -->
+      <div id="vac-card" class="pto-card-container">
+        <img class="pto-img" src="img/team.png" />
+        <div class="pto-info-container">
+          <div class="wrapper-pto">
+            <label class="cust-label" for="vac-input-0"
+              >Your First and Last Name:</label
+            >
+            <input class="cust-input" id="vac-input-0" type="text" />
+          </div>
+
+          <div class="wrapper-pto-date">
+            <label class="cust-label" for="vac-input-1">Start Date:</label>
+            <select id="vac-input-1">
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
+            <select id="vac-input-2">
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+            <select id="vac-input-3">
+              <option value="1st">1</option>
+              <option value="2nd">2</option>
+              <option value="3rd">3</option>
+              <option value="4th">4</option>
+              <option value="5th">5</option>
+              <option value="6th">6</option>
+              <option value="7th">7</option>
+              <option value="8th">8</option>
+              <option value="9th">9</option>
+              <option value="10th">10</option>
+              <option value="11th">11</option>
+              <option value="12th">12</option>
+              <option value="13th">13</option>
+              <option value="14th">14</option>
+              <option value="15th">15</option>
+              <option value="16th">16</option>
+              <option value="17th">17</option>
+              <option value="18th">18</option>
+              <option value="19th">19</option>
+              <option value="20th">20</option>
+              <option value="21st">21</option>
+              <option value="22nd">22</option>
+              <option value="23rd">23</option>
+              <option value="24th">24</option>
+              <option value="25th">25</option>
+              <option value="26th">26</option>
+              <option value="27th">27</option>
+              <option value="28th">28</option>
+              <option value="29th">29</option>
+              <option value="30th">30</option>
+              <option value="31st">31</option>
+            </select>
+          </div>
+          <div class="wrapper-pto-date">
+            <label class="cust-label" for="vac-input-5">End Date:</label>
+            <select id="vac-input-5">
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
+            <select id="vac-input-6">
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">Jule</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+            <select id="vac-input-7">
+              <option value="1st">1</option>
+              <option value="2nd">2</option>
+              <option value="3rd">3</option>
+              <option value="4th">4</option>
+              <option value="5th">5</option>
+              <option value="6th">6</option>
+              <option value="7th">7</option>
+              <option value="8th">8</option>
+              <option value="9th">9</option>
+              <option value="10th">10</option>
+              <option value="11th">11</option>
+              <option value="12th">12</option>
+              <option value="13th">13</option>
+              <option value="14th">14</option>
+              <option value="15th">15</option>
+              <option value="16th">16</option>
+              <option value="17th">17</option>
+              <option value="18th">18</option>
+              <option value="19th">19</option>
+              <option value="20th">20</option>
+              <option value="21st">21</option>
+              <option value="22nd">22</option>
+              <option value="23rd">23</option>
+              <option value="24th">24</option>
+              <option value="25th">25</option>
+              <option value="26th">26</option>
+              <option value="27th">27</option>
+              <option value="28th">28</option>
+              <option value="29th">29</option>
+              <option value="30th">30</option>
+              <option value="31st">31</option>
+            </select>
+          </div>
+          <div class="wrapper-pto-date">
+            <label class="cust-label" for="vac-input-8">First work day:</label>
+            <select id="vac-input-8">
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
+            <select id="vac-input-9">
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">Jule</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+            <select id="vac-input-10">
+              <option value="1st">1</option>
+              <option value="2nd">2</option>
+              <option value="3rd">3</option>
+              <option value="4th">4</option>
+              <option value="5th">5</option>
+              <option value="6th">6</option>
+              <option value="7th">7</option>
+              <option value="8th">8</option>
+              <option value="9th">9</option>
+              <option value="10th">10</option>
+              <option value="11th">11</option>
+              <option value="12th">12</option>
+              <option value="13th">13</option>
+              <option value="14th">14</option>
+              <option value="15th">15</option>
+              <option value="16th">16</option>
+              <option value="17th">17</option>
+              <option value="18th">18</option>
+              <option value="19th">19</option>
+              <option value="20th">20</option>
+              <option value="21st">21</option>
+              <option value="22nd">22</option>
+              <option value="23rd">23</option>
+              <option value="24th">24</option>
+              <option value="25th">25</option>
+              <option value="26th">26</option>
+              <option value="27th">27</option>
+              <option value="28th">28</option>
+              <option value="29th">29</option>
+              <option value="30th">30</option>
+              <option value="31st">31</option>
+            </select>
+          </div>
+          <button id="vac-esc" class="pto-btn">Send Vacation Email</button>
+        </div>
+      </div>
+      <div id="shift-card" class="pto-card-container hidden">
+        <img class="pto-img" src="img/pto-shift.jpg" />
+        <div class="pto-info-container">
+          <div class="wrapper-pto">
+            <label class="cust-label" for="shift-input-0"
+              >Your First and Last Name:</label
+            >
+            <input class="cust-input" id="shift-input-0" type="text" />
+          </div>
+          <div class="wrapper-pto">
+            <label class="cust-label" for="shift-input-1"
+              >Agent swapping the Shift:</label
+            >
+            <input class="cust-input" id="shift-input-1" type="text" />
+          </div>
+          <div class="wrapper-pto">
+            <label class="cust-label" for="shift-input-2">Your Shift:</label>
+            <select id="shift-input-2">
+              <option value="A Shift [06:00 - 14:00]">
+                A Shift [06:00 - 14:00]
+              </option>
+              <option value="C Shift [14:00 - 22:00]">
+                C Shift [14:00 - 22:00]
+              </option>
+              <option value="E Shift [16:00 - 24:00]">
+                E Shift [16:00 - 24:00]
+              </option>
+              <option value="F Shift [18:00 - 02:00]">
+                F Shift [18:00 - 02:00]
+              </option>
+              <option value="G Shift [20:00 - 04:00]">
+                G Shift [20:00 - 04:00]
+              </option>
+              <option value="H Shift [22:00 - 06:00]">
+                H Shift [22:00 - 06:00]
+              </option>
+            </select>
+          </div>
+          <div class="wrapper-pto">
+            <label class="cust-label" for="shift-input-3"
+              >Other Agent's Shift:</label
+            >
+            <select id="shift-input-3">
+              <option value="A Shift [06:00 - 14:00]">
+                A Shift [06:00 - 14:00]
+              </option>
+              <option value="C Shift [14:00 - 22:00]">
+                C Shift [14:00 - 22:00]
+              </option>
+              <option value="E Shift [16:00 - 24:00]">
+                E Shift [16:00 - 24:00]
+              </option>
+              <option value="F Shift [18:00 - 02:00]">
+                F Shift [18:00 - 02:00]
+              </option>
+              <option value="G Shift [20:00 - 04:00]">
+                G Shift [20:00 - 04:00]
+              </option>
+              <option value="H Shift [22:00 - 06:00]">
+                H Shift [22:00 - 06:00]
+              </option>
+            </select>
+          </div>
+          <div class="wrapper-pto">
+            <label class="cust-label" for="shift-input-4"
+              >This is for the Month of:</label
+            >
+            <select id="shift-input-4">
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+          </div>
+          <button id="shift-esc" class="pto-btn">Send Shift Swap Email</button>
+        </div>
+      </div>
+      <div id="pl-card" class="pto-card-container hidden">
+        <img class="pto-img" src="img/pto-paid-leave.jpg" />
+        <div class="pto-info-container">
+          <div class="wrapper-pto">
+            <label class="cust-label" for="pl-input-0"
+              >Your First and Last Name:
+            </label>
+            <input class="cust-input" id="pl-input-0" type="text" />
+          </div>
+
+          <div class="wrapper-pto-date">
+            <label class="cust-label" for="pl-input-1">Start Date:</label>
+            <select id="pl-input-1">
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
+            <select id="pl-input-2">
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+            <select id="pl-input-3">
+              <option value="1st">1</option>
+              <option value="2nd">2</option>
+              <option value="3rd">3</option>
+              <option value="4th">4</option>
+              <option value="5th">5</option>
+              <option value="6th">6</option>
+              <option value="7th">7</option>
+              <option value="8th">8</option>
+              <option value="9th">9</option>
+              <option value="10th">10</option>
+              <option value="11th">11</option>
+              <option value="12th">12</option>
+              <option value="13th">13</option>
+              <option value="14th">14</option>
+              <option value="15th">15</option>
+              <option value="16th">16</option>
+              <option value="17th">17</option>
+              <option value="18th">18</option>
+              <option value="19th">19</option>
+              <option value="20th">20</option>
+              <option value="21st">21</option>
+              <option value="22nd">22</option>
+              <option value="23rd">23</option>
+              <option value="24th">24</option>
+              <option value="25th">25</option>
+              <option value="26th">26</option>
+              <option value="27th">27</option>
+              <option value="28th">28</option>
+              <option value="29th">29</option>
+              <option value="30th">30</option>
+              <option value="31st">31</option>
+            </select>
+          </div>
+          <div class="wrapper-pto-date">
+            <label class="cust-label" for="pl-input-4">End Date:</label>
+            <select id="pl-input-4">
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
+            <select id="pl-input-5">
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+            <select id="pl-input-6">
+              <option value="1st">1</option>
+              <option value="2nd">2</option>
+              <option value="3rd">3</option>
+              <option value="4th">4</option>
+              <option value="5th">5</option>
+              <option value="6th">6</option>
+              <option value="7th">7</option>
+              <option value="8th">8</option>
+              <option value="9th">9</option>
+              <option value="10th">10</option>
+              <option value="11th">11</option>
+              <option value="12th">12</option>
+              <option value="13th">13</option>
+              <option value="14th">14</option>
+              <option value="15th">15</option>
+              <option value="16th">16</option>
+              <option value="17th">17</option>
+              <option value="18th">18</option>
+              <option value="19th">19</option>
+              <option value="20th">20</option>
+              <option value="21st">21</option>
+              <option value="22nd">22</option>
+              <option value="23rd">23</option>
+              <option value="24th">24</option>
+              <option value="25th">25</option>
+              <option value="26th">26</option>
+              <option value="27th">27</option>
+              <option value="28th">28</option>
+              <option value="29th">29</option>
+              <option value="30th">30</option>
+              <option value="31st">31</option>
+            </select>
+          </div>
+          <div class="wrapper-pto">
+            <label class="cust-label" for="pl-input-7"
+              >Reason for Paid Leave is:</label
+            >
+            <input class="cust-input" id="pl-input-7" type="text" />
+          </div>
+          <button id="pl-esc" class="pto-btn">Send Paid Leave Email</button>
+        </div>
+      </div>
+      <div id="sick-card" class="pto-card-container hidden">
+        <img class="pto-img" src="img/pto-sick.jpg" />
+        <div class="pto-info-container">
+          <div class="wrapper-pto">
+            <label class="cust-label" for="sick-input-0"
+              >Your First and Last Name:</label
+            >
+            <input class="cust-input" id="sick-input-0" type="text" />
+          </div>
+          <div class="wrapper-pto-date">
+            <label class="cust-label" for="sick-input-1">Start Date:</label>
+            <select id="sick-input-1">
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
+            <select id="sick-input-2">
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+            <select id="sick-input-3">
+              <option value="1st">1</option>
+              <option value="2nd">2</option>
+              <option value="3rd">3</option>
+              <option value="4th">4</option>
+              <option value="5th">5</option>
+              <option value="6th">6</option>
+              <option value="7th">7</option>
+              <option value="8th">8</option>
+              <option value="9th">9</option>
+              <option value="10th">10</option>
+              <option value="11th">11</option>
+              <option value="12th">12</option>
+              <option value="13th">13</option>
+              <option value="14th">14</option>
+              <option value="15th">15</option>
+              <option value="16th">16</option>
+              <option value="17th">17</option>
+              <option value="18th">18</option>
+              <option value="19th">19</option>
+              <option value="20th">20</option>
+              <option value="21st">21</option>
+              <option value="22nd">22</option>
+              <option value="23rd">23</option>
+              <option value="24th">24</option>
+              <option value="25th">25</option>
+              <option value="26th">26</option>
+              <option value="27th">27</option>
+              <option value="28th">28</option>
+              <option value="29th">29</option>
+              <option value="30th">30</option>
+              <option value="31st">31</option>
+            </select>
+          </div>
+          <button id="sick-esc" class="pto-btn">Send Sick Leave Email</button>
+          <div class="wrapper-pto">
+            <p class="wholsome">We hope you get well soon!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sorr-section container hidden" id="section-9">
+      <div class="subheader-container">
+        <!-- BUTTONS AT THE TOP -->
+        <button id="sorr-copy" class="sub-buttons">COPY</button>
+        <button id="sorr-summary" class="sub-buttons">COPY SUMMARY</button>
+        <button id="sorr-clear" class="sub-buttons sub-btn-del">
+          CLEAR ALL FIELDS
+        </button>
+      </div>
+      <div class="sorr-container">
+        <div class="sorr-info-container-left">
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="sorr-input-0"
+              >Point of Contact:</label
+            >
+            <input
+              class="cust-input"
+              id="sorr-input-0"
+              type="text"
+              placeholder=""
+            />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="sorr-input-1"
+              >Point of Contacts Phone Number:</label
+            >
+            <input
+              class="cust-input"
+              id="sorr-input-1"
+              type="text"
+              placeholder=""
+            />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="sorr-input-2"
+              >Point of Contacts Email Address:</label
+            >
+            <input
+              class="cust-input"
+              id="sorr-input-2"
+              type="text"
+              placeholder=""
+            />
+          </div>
+          <br />
+
+          <br />
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="sorr-input-3">CompanyID:</label>
+            <input
+              class="cust-input"
+              id="sorr-input-3"
+              type="text"
+              placeholder=""
+            />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="sorr-input-4">StoreID:</label>
+            <input
+              class="cust-input"
+              id="sorr-input-4"
+              type="text"
+              placeholder=""
+            />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="sorr-input-5"
+              >Aloha Key (CMCID):
+            </label>
+            <input
+              class="cust-input"
+              id="sorr-input-5"
+              type="text"
+              placeholder=""
+            />
+          </div>
+          <br />
+
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="sorr-input-6">Issue Summary: </label>
+            <select class="cust-select" id="sorr-input-6">
+              <option value="Discrepancy">Discrepancy</option>
+              <option value="Resub">Resub</option>
+              <option value="Refund">Refund</option>
+              <option value="OFL File Reprocessing">
+                OFL File Reprocessing
+              </option>
+            </select>
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="sorr-input-7"
+              >Discrepancy Started on:</label
+            >
+            <input class="cust-date" id="sorr-input-7" type="date" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="sorr-input-8"
+              >Discrepancy Ended on:</label
+            >
+            <input class="cust-date" id="sorr-input-8" type="date" />
+          </div>
+          <div class="wrapper-cust-left">
+            <label class="cust-label" for="sorr-input-9"
+              >Missing Amount Reported:
+            </label>
+            <input
+              class="cust-input"
+              id="sorr-input-9"
+              type="text"
+              placeholder=""
+            />
+          </div>
+        </div>
+
+        <!-- BUFFER ZONE -->
+        <div class="sorr-util-container-right">
+          <div class="wrapper-cust-right">
+            <label class="cust-label" for="sorr-input-10"
+              >Additional Notes for SORR Department:</label
+            >
+            <textarea id="sorr-input-10" rows="10" cols="50"></textarea>
+          </div>
+          <div class="sorr-notification-box">
+            <div class="notification-1">
+              <span class="sorr-notif-header"
+                >Mandatory Files for OFL File Reprocessing:</span
+              >
+              <span class="sorr-notif-text"
+                >Offline File, KEK Key, Log/Journal</span
+              >
+            </div>
+            <div class="notification-2">
+              <span class="sorr-notif-header"> DC1 OFL File Path: </span>
+              <div class="sorr-notif-copy-box">
+                <span class="sorr-notif-text"
+                  >Internal file share available to authorized employees</span
+                >
+                <button class="sorr-notif-copy" id="sorr-notif-copy-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="notif-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5A3.375 3.375 0 006.375 7.5H5.25m11.9-3.664A2.251 2.251 0 0015 2.25h-1.5a2.251 2.251 0 00-2.15 1.586m5.8 0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621 0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5a9 9 0 00-9-9z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="notification-3">
+              <span class="sorr-notif-header">PDR Extraction Command</span>
+              <div class="sorr-notif-copy-box">
+                <span class="sorr-notif-text">%iberdir%\bin\rpt.exe /ry</span>
+                <button class="sorr-notif-copy" id="sorr-notif-copy-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="notif-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5A3.375 3.375 0 006.375 7.5H5.25m11.9-3.664A2.251 2.251 0 0015 2.25h-1.5a2.251 2.251 0 00-2.15 1.586m5.8 0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621 0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5a9 9 0 00-9-9z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BUFFER -->
+      <div class="sorr-guide-container">
+        <p class="sorr-guide-header">SORR GUIDES & RESUBMISSION SHEET</p>
+        <div class="esc-btn-container">
+          <button id="sorr-guide-0" class="esc-btn esc-btn--pad">
+            <p>OFFLINE FILE UPLOAD GUIDE</p>
+          </button>
+          <button id="sorr-guide-1" class="esc-btn esc-btn--pad">
+            <p>Resubmission Sheet</p>
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
